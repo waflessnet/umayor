@@ -1,7 +1,10 @@
 <?php 
 class Reservas extends CI_Controller  {
+/*
+ *  index de reserva
+ */
 	 function index(){
-	   echo 'entendiendo el controller';
+	   $this->load->view('reservas/index');
 	 }
 }
 ?>
