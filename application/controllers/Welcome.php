@@ -23,7 +23,7 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url');
 		$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 		$domainName = $_SERVER['HTTP_HOST'] . '/';
-		redirect($protocol . $domainName.'/reservas');
+		redirect($protocol . $domainName.'reservas');
 		
 	}
 }
