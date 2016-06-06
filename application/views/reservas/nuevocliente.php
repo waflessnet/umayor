@@ -1,9 +1,38 @@
+
+<style type="text/css">
+  legend {
+
+    color: #fff;
+  }
+  label{
+
+    color: #fff;
+    
+  }
+
+</style>
+
+<body>
+<div class="animated bounceInDown ng-scope">
+<div class="col-sm-2"></div>
+<div class="col-sm-8 form-box">
+        <div class="form-top">
+                <div class="form-top-left">
+                    <h3>Reservas</h3>
+                        <p>Administracion y estadisticas </p>
+                    </div>
+                    <div class="form-top-right">
+                            <i class="fa fa-cogs"></i>
+                        </div>
+                    </div>
+    <div class="form-bottom">
+        <div class"row" ng-controller="reserva">
 <div class"row">
 <form class="form-horizontal">
 <fieldset>
 
 <!-- Form Name -->
-<legend>Form Name</legend>
+<legend>Nuevo Cliente</legend>
 
 <!-- Text input-->
 <div class="form-group">
@@ -96,3 +125,24 @@
 </form>
 
 </div>
+
+</div>
+        </div>
+        <div class="row">
+                <div class="col-sm-2 pull-right rounded logout">
+                    <a type="button" style="color: #4646E8;" href="/logout">Logout</a>
+                </div>
+        </div>
+        </div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+

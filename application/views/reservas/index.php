@@ -38,19 +38,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">Reservas</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">Acerca</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="#">servicios</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -66,7 +66,7 @@
         <header class="jumbotron hero-spacer">
             <h1>Bienvenido al sistema de reservas online!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-            <p><a class="btn btn-primary btn-large">Login!</a>
+            <p><a class="btn btn-primary btn-large" href="/reservas/login">Login!</a>
             </p>
         </header>
 
