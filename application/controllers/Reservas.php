@@ -25,5 +25,9 @@ class Reservas extends CI_Controller  {
 	  $this->load->view('panel/header');
 	  $this->load->view('panel/panel');		
 	}
+	function solicitud(){
+	  $this->load->view('panel/header');
+	  $this->load->view('solicitud/solicitud');			
+	}
 }
 ?>
