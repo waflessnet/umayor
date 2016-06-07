@@ -36,11 +36,11 @@
                     </span>
 
                 </div>
-                <div class="col-sm-4 rounded cuatro" ui-sref="grafico">
+                <a class="col-sm-4 rounded cuatro" ui-sref="grafico" href="/reservas/graficos">
                         <span style="font-size:60px">
                             <i class="fa fa-area-chart"></i>
                         </span>
-                </div>
+                </a>
             </div>
 
         </form>
