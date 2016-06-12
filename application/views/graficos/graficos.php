@@ -17,8 +17,8 @@
 <div class="col-sm-8 form-box">
         <div class="form-top">
                 <div class="form-top-left">
-                    <h3>Reservas</h3>
-                        <p>Administracion y estadisticas </p>
+                  <h3>Reservas Todas Novias</h3>
+                  <p>Administracion y estadisticas </p>
                     </div>
                     <div class="form-top-right">
                             <i class="fa fa-cogs"></i>
@@ -67,7 +67,7 @@
         </div>
         <div class="row">
                 <div class="col-sm-2 pull-right rounded logout">
-                    <a type="button" style="color: #4646E8;" href="/logout">Logout</a>
+                    <a type="button" style="color: #4646E8;" href="/reservas/panel?">Menú Principal</a>
                 </div>
         </div>
         </div>

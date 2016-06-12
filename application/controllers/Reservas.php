@@ -7,7 +7,7 @@ class Reservas extends CI_Controller  {
 	   $this->load->view('reservas/index');
 	 }
     function  nuevocliente(){
-
+	
 	  $this->load->view('panel/header');
 	  $this->load->view('reservas/nuevocliente');
 	}

@@ -47,7 +47,7 @@
         </div>
         <div class="row">
                 <div class="col-sm-2 pull-right rounded logout">
-                    <a type="button" style="color: #4646E8;" href="/logout">Logout</a>
+                    <a type="button" style="color: #4646E8;" href="/logout">Cerrar sesión</a>
                 </div>
         </div>
         </div>

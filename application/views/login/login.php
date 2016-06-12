@@ -55,7 +55,7 @@ body {
                         <div class="panel panel-default">
                             <div class="panel-heading">                                
                                 <div class="row-fluid user-row">
-                                    <img src="http://s11.postimg.org/7kzgji28v/logo_sm_2_mr_1.png" class="img-responsive" alt="Conxole Admin"/>
+                                   <h3>Todas Novias</h3>
                                 </div>
                             </div>
                             <div class="panel-body">
@@ -67,7 +67,7 @@ body {
                                         <input class="form-control" placeholder="Usuario" id="username" type="text">
                                         <input class="form-control" placeholder="Clave" id="password" type="password">
                                         <br></br>
-                                        <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Login »">
+                                        <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Acceder »">
                                     </fieldset>
                                 </form>
                             </div>

@@ -63,7 +63,7 @@
   <div class="col-md-5">
    <select class="form-control" id="sel1">
     <?php for($x=0;$x < count($solicitud);$x++){ ?>
-        <option value="<?php echo $solicitud[$x]->id_solicitud; ?>"><?php echo $solicitud[$x]->nombre_solicitud; ?></option>
+        <option value="<?php echo $solicitud[$x]->idtipo_solicitud; ?>"><?php echo $solicitud[$x]->nombre_solicitud; ?></option>
     <?php } ?>
 
   </select>

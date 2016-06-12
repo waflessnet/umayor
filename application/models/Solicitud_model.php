@@ -7,7 +7,7 @@ class Solicitud_model extends CI_Model {
     }
 public function listarSolicitud($id=0){
 
-            $query = $this->db->query("call reservas.listarSolicitud($id)");
+            $query = $this->db->query("call listarSolicitud($id)");
             return $query->result();
 
 }
