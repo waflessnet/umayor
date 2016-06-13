@@ -1,4 +1,67 @@
-var reserva = angular.module('reservas', ['ui.bootstrap','chart.js']);
+var reserva = angular.module('reservas', ['mwl.calendar', 'ngAnimate','ui.bootstrap','chart.js']);
+
+//calendar
+//
+//
+
+reserva.controller('calendarCtrl',function(moment,$http,$scope){
+ var vm = this;
+ var eventsArr = []; 
+	$http({
+	   method: 'GET',
+	   url:'/reservas/jsonreservas',
+	   }).success(function(data){
+	    (function re(i){
+		 if(i>=data.length){
+		  return true;
+		}
+		
+		var ini = new Date(data[i].fecha_reserva+' '+data[i].hora_ini);
+	        var fin = new Date(data[i].fecha_reserva+' '+data[i].hora_fin);
+		if(data[i].es_confirmada =="1"){
+		var tipo ='success';
+			
+		}else{
+		var tipo ='warning'
+		}
+		 vm.events.push({
+		  title : data[i].nombre_cliente+' ('+data[i].nombre_solicitud+') - '+data[i].nombre_empleado,
+		  startsAt: ini ,
+		  endsAt:fin ,
+	  	  type:tipo,
+		});
+		 i=i+1;
+		 re(i);	
+	     })(0);
+	});
+
+
+
+
+
+//$scope.$applyAsync(function(){
+ //events  
+//	})	
+    /*vm.events = [{
+      title: 'No event end date',
+      startsAt: moment().hours(3).minutes(0).toDate(),
+      type: 'info'
+    }, {
+      title: 'No event end date',
+      startsAt: moment().hours(5).minutes(0).toDate(),
+      type: 'warning'
+    }];*/
+
+    vm.calendarView = 'month';
+    vm.viewDate = new Date();
+
+})
+
+
+
+//calendar end
+
+
 
 
 reserva.controller('nuevoClienteCtrl',function($scope){
@@ -192,7 +255,7 @@ reserva.controller('reserva',function($scope){
   $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
   //$scope.format = $scope.formats[0];
   $scope.format="yyyy-MM-dd";
-  //$scope.altInputFormats = ['M!/d!/yyyy'];
+  $scope.altInputFormats = ['yyyy-MM-dd'];
 
   $scope.popup1 = {
     opened: false

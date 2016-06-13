@@ -39,4 +39,34 @@ public function crearEmpleado($cliente){
             return $query->result();
 
 }
+public function listarEmpleado(){
+	$query = $this->db->query("call listarEmpledos()");
+	mysqli_next_result($this->db->conn_id);
+	return $query->result();
+}
+public function listarBloqueHorario(){
+	$query = $this->db->query("call listarBloqueHorario()");
+	mysqli_next_result($this->db->conn_id);
+	return $query->result();
+}
+public function crearReservaCliente($reserva){
+	$sp ="{$reserva['cliente']},";
+	$sp.="{$reserva['empleado']},";
+	$sp.="{$reserva['bloque']},";
+	$sp.="{$reserva['tipo']},";
+	$sp.="'{$reserva['fecha']}'";
+
+	$query = $this->db->query("call crearReservaCliente($sp)");
+	mysqli_next_result($this->db->conn_id);
+	return $query->result();
+
+	
+}
+public function jsonreservas(){
+	$query = $this->db->query("call listarReservas()");
+	mysqli_next_result($this->db->conn_id);
+	return $query->result();
+
+}
+
 }

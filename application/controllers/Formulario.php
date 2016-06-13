@@ -48,6 +48,35 @@ class Formulario extends CI_Controller  {
 
 	}
   }
+   function nuevareserva(){
+	if($this->input->method(TRUE) == "POST"){
+	 $cliente = array();
+	 
+	 //$cliente['cliente']    = $this->input->post('cliente');
+         $cliente["cliente"]	= 1;
+	 $cliente['empleado']   = $this->input->post('empleado');
+	 $cliente['tipo']       = $this->input->post('tipo');
+	 $cliente['bloque']     = $this->input->post('bloque');
+	 $cliente['fecha']      = $this->input->post('fecha');
+	  $this->load->database();
+	  $this->load->model('Cliente_model');
+	  $solicitud = $this->Cliente_model->crearReservaCliente($cliente);
+	  //var_dump($solicitud[0]->salida);
+	  $this->load->view('panel/header');
+	  $this->load->view('reservas/nuevocliente',array('resultado'=>$solicitud[0]->salida));
+ 
 
+	}
+
+
+	}
+   function listarempleado(){
+	  $this->load->database();
+	  $this->load->model('Cliente_model');
+	  $solicitud = $this->Cliente_model->listarEmpleado();
+	  echo json_encode($solicitud);
+	
+	}
+ 
 }
 
