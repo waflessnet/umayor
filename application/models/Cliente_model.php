@@ -49,6 +49,13 @@ public function listarBloqueHorario(){
 	mysqli_next_result($this->db->conn_id);
 	return $query->result();
 }
+public function listarClientes(){
+	$query = $this->db->query("call listarClientes()");
+	mysqli_next_result($this->db->conn_id);
+	return $query->result();
+
+
+}
 public function crearReservaCliente($reserva){
 	$sp ="{$reserva['cliente']},";
 	$sp.="{$reserva['empleado']},";
@@ -68,5 +75,11 @@ public function jsonreservas(){
 	return $query->result();
 
 }
+public function jsoempleadoreservas(){
+	$query = $this->db->query("call listarReservasEmpleados()");
+	mysqli_next_result($this->db->conn_id);
+	return $query->result();
 
+
+}
 }

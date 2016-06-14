@@ -46,6 +46,7 @@
 </p>
   </div>
 </div>
+
 <div class="form-group">
   <label class="col-md-4 control-label" for="paterno">Empleado</label>  
   <div class="col-md-5">
@@ -59,6 +60,21 @@
     
   </div>
 </div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="paterno">Cliente</label>  
+  <div class="col-md-5">
+   <select class="form-control" id="sel1" name="cliente">
+    <option value="-1" >Seleccione un cliente </option>
+    <?php for($x=0;$x < count($clientes);$x++){ ?>
+        <option value="<?php echo $clientes[$x]->idcliente; ?>"><?php echo $clientes[$x]->nombre; ?></option>
+    <?php } ?>
+
+  </select>
+    
+  </div>
+</div>
+
 
 <div class="form-group">
   <label class="col-md-4 control-label" for="paterno">Tipo solicitud</label>  

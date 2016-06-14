@@ -19,8 +19,10 @@ class Reservas extends CI_Controller  {
 	  $empleados = $this->Cliente_model->listarEmpleado();
 	  $solicitud = $this->Solicitud_model->listarSolicitud();
      	  $bloque    = $this->Cliente_model->listarBloqueHorario(); 
+	  $clientes  =  $this->Cliente_model->listarClientes(); 
+
 	  $this->load->view('panel/header');
-	  $this->load->view('reservas/nuevareserva',array('solicitud'=>$solicitud,'empleados'=>$empleados,'bloque'=>$bloque));
+	  $this->load->view('reservas/nuevareserva',array('solicitud'=>$solicitud,'empleados'=>$empleados,'bloque'=>$bloque,'clientes'=>$clientes));
 	} 
 	function login(){
 	  $this->load->view('reservas/header');
@@ -48,6 +50,13 @@ class Reservas extends CI_Controller  {
 	 $this->load->model('Cliente_model');
 	 $reservas = $this->Cliente_model->jsonreservas();
 	 echo json_encode($reservas);
+	}
+      function jsonempleadoreservas(){
+	 $this->load->database();
+	 $this->load->model('Cliente_model');
+	 $reservas = $this->Cliente_model->jsoempleadoreservas();
+	 echo json_encode($reservas);
+
 	}
 
 }

@@ -168,14 +168,36 @@ reserva.controller('nuevoClienteCtrl',function($scope){
 })
 
 
-reserva.controller("BarCtrl", function ($scope) {
-  $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-  $scope.series = ['Series A', 'Series B'];
+reserva.controller("BarCtrl", function ($scope,$http) {
+  //
+  $scope.labels = new Array();
+  $scope.data   = new Array();
+  $scope.puntos = new Array();
+$http({
+	   method: 'GET',
+	   url:'/reservas/jsonempleadoreservas',
+	   }).success(function(data){
 
-  $scope.data = [
-    [65, 59, 80, 81, 56, 55, 40],
-    [28, 48, 40, 19, 86, 27, 90]
-  ];
+		(function i(x){
+		    if(x >= data.length){
+		      $scope.data.push($scope.puntos);
+		   return true;
+		   }
+	          
+		 x++;
+                  i(x);
+		})(0)
+		 for(x=0;x<data.length;x++){
+		     $scope.labels.push(data[x].nombre);
+		     $scope.puntos.push(parseInt(data[x].cantidad));
+		}    	    
+	});
+
+ 
+  //$scope.data = [
+  //  [65, 59, 80, 81, 56, 55, 40],
+  //  [28, 48, 40, 19, 86, 27, 90]
+ // ];
 });
 
 reserva.controller("DoughnutCtrl", function ($scope) {

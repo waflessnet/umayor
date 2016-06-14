@@ -52,8 +52,8 @@ class Formulario extends CI_Controller  {
 	if($this->input->method(TRUE) == "POST"){
 	 $cliente = array();
 	 
-	 //$cliente['cliente']    = $this->input->post('cliente');
-         $cliente["cliente"]	= 1;
+	 $cliente['cliente']    = $this->input->post('cliente');
+         //$cliente["cliente"]	= 1;
 	 $cliente['empleado']   = $this->input->post('empleado');
 	 $cliente['tipo']       = $this->input->post('tipo');
 	 $cliente['bloque']     = $this->input->post('bloque');

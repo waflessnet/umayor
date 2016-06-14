@@ -30,7 +30,7 @@
 <fieldset>
 
 <div class="row">
-<div class="col-lg-6 col-sm-12"  ng-controller="LineCtrl" style="background-color: #fff;border-radius: 10px;">
+<!--div class="col-lg-6 col-sm-12"  ng-controller="LineCtrl" style="background-color: #fff;border-radius: 10px;">
                 <canvas id="line" class="chart chart-line" chart-data="data"
                   chart-labels="labels" chart-legend="true" chart-series="series"
                   chart-click="onClick"  >
@@ -38,13 +38,13 @@
 
 
 
-</div>
+</div-->
 <div class="col-lg-1 col-sm-1"></div>
-<div class="col-lg-5 col-sm-12"  ng-controller="DoughnutCtrl" style="background-color: #fff;border-radius: 10px;">
+<!--div class="col-lg-5 col-sm-12"  ng-controller="DoughnutCtrl" style="background-color: #fff;border-radius: 10px;">
 <canvas id="doughnut" class="chart chart-doughnut"
   chart-data="data" chart-labels="labels">
 </canvas> 
-</div>
+</di-->
 </div>
 
 <div class="row">

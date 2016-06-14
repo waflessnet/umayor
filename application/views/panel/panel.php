@@ -18,12 +18,12 @@
                 <div class="col-sm-2"></div>
                 <a class="col-sm-4 rounded uno" ui-sref="programar" href="/reservas/nuevareserva">
                         <span style="font-size: 60px;">
-                                <i class="fa fa-calendar-plus-o"></i>
+                                <i class="fa fa-pencil"></i>
                         </span>
                 </a>
                 <a class="col-sm-4 rounded dos" ui-sref="actividad" href="/reservas/nuevocliente">
                         <span style="font-size:60px;">
-                            <i class="fa fa-table"></i>
+                            <i class="fa fa-user-plus"></i>
                         </span>
                 </a>
             </div>
@@ -42,6 +42,20 @@
                         </span>
                 </a>
             </div>
+	<div class="row">       
+                <div class="col-sm-2"></div>
+                <a class="col-sm-4 rounded uno" ui-sref="programar" href="/reservas/listareservas">
+                        <span style="font-size: 60px;">
+                                <i class="fa fa-calendar-plus-o"></i>
+                        </span>
+                </a>
+                <a class="col-sm-4 rounded dos" ui-sref="actividad" href="/reservas/nuevocliente">
+                        <span style="font-size:60px;">
+                            <i class="fa fa-table"></i>
+                        </span>
+                </a>
+            </div>
+
 
         </form>
         </div>
